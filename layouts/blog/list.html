@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<header class="page-header blog-header">
+
+    <p class="eyebrow">WRITING</p>
+
+    <h1>Blog</h1>
+
+    <p class="page-description">
+        Notes, essays, technical explorations, mathematical ideas,
+        and things I am trying to understand.
+    </p>
+
+</header>
+
+<section class="blog-list">
+
+    {{ range .Pages.ByDate.Reverse }}
+
+    <article class="blog-entry">
+
+        <div class="blog-entry-date">
+            {{ .Date.Format "02 Jan 2006" }}
+        </div>
+
+        <div class="blog-entry-body">
+
+            <h2>
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+
+            <p>{{ .Summary }}</p>
+
+            <div class="blog-entry-footer">
+                {{ .ReadingTime }} min read
+
+                {{ with .Params.categories }}
+                    · {{ delimit . ", " }}
+                {{ end }}
+            </div>
+
+        </div>
+
+    </article>
+
+    {{ end }}
+
+</section>
+
+{{ end }}

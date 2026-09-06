@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {{ if .IsHome }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} · {{ .Site.Title }}
+        {{ end }}
+    </title>
+
+    <meta name="description" content="{{ .Site.Params.description | default .Site.Title }}">
+
+    {{ $css := resources.Get "css/main.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+    {{ if or .Params.math .Site.Params.math }}
+        {{ partial "math.html" . }}
+    {{ end }}
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav class="site-nav">
+        <a class="site-title" href="{{ "/" | relURL }}">
+            {{ .Site.Title }}
+        </a>
+
+        <div class="site-nav-links">
+            <a href="{{ "/blog/" | relURL }}">Blog</a>
+            <a href="{{ "/projects/" | relURL }}">Projects</a>
+            <a href="{{ "/publications/" | relURL }}">Publications</a>
+            <a href="{{ "/about/" | relURL }}">About</a>
+        </div>
+    </nav>
+</header>
+
+<main class="site-main">
+    {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+    <p>© {{ now.Year }} {{ .Site.Title }}</p>
+</footer>
+
+</body>
+</html>

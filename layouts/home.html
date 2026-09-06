@@ -1,0 +1,137 @@
+{{ define "main" }}
+
+<section class="hero">
+
+    <p class="eyebrow">Big Data Analytics · Dynamical Systems · System Design</p>
+
+    <h1>Shubham Kumar</h1>
+
+    <p class="hero-description">
+        I explore mathematics, computation, engineering, and scientific
+        research. This is where I write about things I'm learning,
+        building, and trying to understand.
+    </p>
+
+    <div class="hero-links">
+        <a href="{{ "/blog/" | relURL }}">Read the blog →</a>
+        <a href="{{ "/about/" | relURL }}">About me →</a>
+    </div>
+
+</section>
+
+
+<section class="home-section">
+
+    <div class="section-heading">
+        <h2>Recent writing</h2>
+        <a href="{{ "/blog/" | relURL }}">All posts →</a>
+    </div>
+
+    {{ range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+
+    <article class="post-card">
+
+        <div class="post-card-meta">
+            {{ .Date.Format "2 January 2006" }}
+            · {{ .ReadingTime }} min read
+        </div>
+
+        <h3>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+
+        <p>{{ .Summary }}</p>
+
+    </article>
+
+    {{ end }}
+
+</section>
+
+
+<section class="home-section">
+
+    <div class="section-heading">
+        <h2>Selected work</h2>
+        <a href="{{ "/projects/" | relURL }}">All projects →</a>
+    </div>
+
+    <div class="project-grid">
+
+        {{ range first 3 (where site.RegularPages "Section" "projects") }}
+
+        <article class="project-card">
+
+            <div class="post-card-meta">
+                {{ .Date.Format "2006" }}
+            </div>
+
+            <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+
+            <p>{{ .Summary }}</p>
+
+        </article>
+
+        {{ end }}
+
+    </div>
+
+</section>
+
+
+<section class="home-section interests">
+
+    <div class="section-heading">
+        <h2>Interests</h2>
+    </div>
+
+    <div class="interest-list">
+
+        <a href="{{ "/categories/mathematics/" | relURL }}">
+            Mathematics
+        </a>
+
+        <a href="{{ "/categories/computing/" | relURL }}">
+            Computing
+        </a>
+
+        <a href="{{ "/categories/research/" | relURL }}">
+            Research
+        </a>
+
+        <a href="{{ "/categories/engineering/" | relURL }}">
+            Engineering
+        </a>
+
+        <a href="{{ "/categories/neuroscience/" | relURL }}">
+            Neuroscience
+        </a>
+
+        <a href="{{ "/categories/gis/" | relURL }}">
+            Geospatial Analysis
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="home-section home-about">
+
+    <div class="section-heading">
+        <h2>About this site</h2>
+    </div>
+
+    <p>
+        This website is part portfolio, part notebook, and part personal
+        publication. I use it to document projects, research, mathematical
+        ideas, and things I learn along the way.
+    </p>
+
+    <a href="{{ "/about/" | relURL }}">More about me →</a>
+
+</section>
+
+{{ end }}

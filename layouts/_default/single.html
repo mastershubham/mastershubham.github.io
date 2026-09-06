@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+<article class="single-post">
+
+    <header class="post-header">
+
+    {{ if eq .Section "blog" }}
+        <p class="post-card-meta">
+            {{ .Date.Format "2 January 2006" }}
+            · {{ .ReadingTime }} min read
+        </p>
+    {{ end }}
+
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.tags }}
+        <div class="tags">
+            {{ range . }}
+                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">
+                    #{{ . }}
+                </a>
+            {{ end }}
+        </div>
+    {{ end }}
+
+    </header>
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    {{ if eq .Section "blog" }}
+
+    <nav class="post-navigation">
+
+        <div>
+            {{ with .PrevInSection }}
+                <a href="{{ .RelPermalink }}">
+                    ← {{ .Title }}
+                </a>
+            {{ end }}
+        </div>
+
+        <div>
+            {{ with .NextInSection }}
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }} →
+                </a>
+            {{ end }}
+        </div>
+
+    </nav>
+
+    {{ end }}
+
+</article>
+
+{{ end }}

@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<header class="page-header">
+
+    <p class="eyebrow">CATEGORY</p>
+
+    <h1>{{ .Title }}</h1>
+
+    <p class="page-description">
+        {{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}
+    </p>
+
+</header>
+
+<div class="post-list">
+
+    {{ range .Pages.ByDate.Reverse }}
+
+        <article class="post-card">
+
+            <div class="post-card-meta">
+                {{ .Date.Format "02 Jan 2006" }}
+            </div>
+
+            <h2>
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+
+            <p>{{ .Summary }}</p>
+
+        </article>
+
+    {{ end }}
+
+</div>
+
+{{ end }}
