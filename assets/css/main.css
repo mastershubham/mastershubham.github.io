@@ -67,27 +67,27 @@ a:hover {
 /* Homepage */
 
 .hero {
-    max-width: 760px;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 4rem;
+    align-items: center;
     margin-bottom: 4rem;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    line-height: 1.05;
-    margin: .5rem 0 1rem;
+.hero-content {
+    max-width: 760px;
 }
 
-.hero-description {
-    font-size: 1.2rem;
-    color: var(--muted);
-    max-width: 650px;
-}
-
-.hero-links {
+.hero-photo {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    color: var(--link);
+    justify-content: flex-end;
+}
+
+.hero-photo img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .home-section {
@@ -286,6 +286,20 @@ a:hover {
 
     .hero h1 {
         font-size: 2.8rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-photo {
+        justify-content: flex-start;
+    }
+
+    .hero-photo img {
+        width: 160px;
+        height: 160px;
     }
 
     .post-header h1 {
