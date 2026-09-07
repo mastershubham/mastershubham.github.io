@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Project Polymath</title><link>https://mastershubham.github.io/projects/</link><description>Recent content in Projects on Project Polymath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0530</lastBuildDate><atom:link href="https://mastershubham.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Large-Scale Hydrological Analysis</title><link>https://mastershubham.github.io/projects/hydrological-analysis/</link><pubDate>Tue, 01 Sep 2026 00:00:00 +0530</pubDate><guid>https://mastershubham.github.io/projects/hydrological-analysis/</guid><description>A geospatial pipeline for watershed delineation, stream extraction, and hydrological analysis using GRASS GIS and Python.</description></item><item><title>Resting-State fMRI Analysis</title><link>https://mastershubham.github.io/projects/fmri-analysis/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0530</pubDate><guid>https://mastershubham.github.io/projects/fmri-analysis/</guid><description>Analysis of resting-state functional MRI data using preprocessing, denoising, and functional connectivity methods.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Project Polymath</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Project Polymath</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Large-Scale Hydrological Analysis</title>
+      <link>http://localhost:1313/projects/hydrological-analysis/</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/projects/hydrological-analysis/</guid>
+      <description>A geospatial pipeline for watershed delineation, stream extraction, and hydrological analysis using GRASS GIS and Python.</description>
+    </item>
+    <item>
+      <title>Resting-State fMRI Analysis</title>
+      <link>http://localhost:1313/projects/fmri-analysis/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/projects/fmri-analysis/</guid>
+      <description>Analysis of resting-state functional MRI data using preprocessing, denoising, and functional connectivity methods.</description>
+    </item>
+  </channel>
+</rss>

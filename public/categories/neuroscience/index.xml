@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neuroscience on Project Polymath</title><link>https://mastershubham.github.io/categories/neuroscience/</link><description>Recent content in Neuroscience on Project Polymath</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0530</lastBuildDate><atom:link href="https://mastershubham.github.io/categories/neuroscience/index.xml" rel="self" type="application/rss+xml"/><item><title>Resting-State fMRI Analysis</title><link>https://mastershubham.github.io/projects/fmri-analysis/</link><pubDate>Sat, 01 Aug 2026 00:00:00 +0530</pubDate><guid>https://mastershubham.github.io/projects/fmri-analysis/</guid><description>Analysis of resting-state functional MRI data using preprocessing, denoising, and functional connectivity methods.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neuroscience on Project Polymath</title>
+    <link>http://localhost:1313/categories/neuroscience/</link>
+    <description>Recent content in Neuroscience on Project Polymath</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/neuroscience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resting-State fMRI Analysis</title>
+      <link>http://localhost:1313/projects/fmri-analysis/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/projects/fmri-analysis/</guid>
+      <description>Analysis of resting-state functional MRI data using preprocessing, denoising, and functional connectivity methods.</description>
+    </item>
+  </channel>
+</rss>
