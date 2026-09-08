@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mastershubham.github.io/sitemap.xml
