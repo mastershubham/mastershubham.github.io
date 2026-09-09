@@ -1,0 +1,6 @@
+{{- $side := .Get "side" | default "right" -}}
+<div class="annotated-{{ $side }}">
+
+{{ .Inner }}
+
+</div>

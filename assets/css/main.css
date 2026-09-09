@@ -186,6 +186,9 @@ a:hover {
 }
 
 .post-content {
+    position: relative;
+    max-width: var(--reading-width);
+    margin: auto;
     font-family: Georgia, serif;
     font-size: 1.05rem;
 }
@@ -415,5 +418,53 @@ a:hover {
 
     .blog-entry-date {
         margin-bottom: .35rem;
+    }
+}
+
+
+/* Margin Notes */
+
+.annotated-left,
+.annotated-right {
+    display: flow-root; /* makes the paragraph's height include the floated note */
+}
+
+.margin-note {
+    width: 200px;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+.margin-note-left {
+    float: left;
+    margin-left: calc(-200px - 2.5rem);
+    text-align: right;
+}
+
+.margin-note-right {
+    float: right;
+    margin-right: calc(-200px - 2.5rem);
+    text-align: left;
+}
+
+@media (max-width: 1100px) {
+    .single-post {
+        max-width: var(--reading-width);
+    }
+
+    .margin-note {
+        float: none;
+        display: block;
+
+        width: auto;
+        margin: 0.5rem 0 1rem;
+
+        font-size: 0.82rem;
+        text-align: left;
+        padding-left: 1rem;
+        border-left: 2px solid var(--border);
     }
 }
