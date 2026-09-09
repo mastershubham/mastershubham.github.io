@@ -422,14 +422,24 @@ a:hover {
 }
 
 
-/* Margin Notes */
-
 .annotated-left,
 .annotated-right {
-    display: flow-root; /* makes the paragraph's height include the floated note */
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.annotated-left {
+    flex-direction: row-reverse;
+}
+
+.annotated-content {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .margin-note {
+    flex: 0 0 200px;
     width: 200px;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -438,16 +448,12 @@ a:hover {
     color: var(--muted);
 }
 
-.margin-note-left {
-    float: left;
-    margin-left: calc(-200px - 2.5rem);
-    text-align: right;
+.margin-note-right {
+    text-align: left;
 }
 
-.margin-note-right {
-    float: right;
-    margin-right: calc(-200px - 2.5rem);
-    text-align: left;
+.margin-note-left {
+    text-align: right;
 }
 
 @media (max-width: 1100px) {
@@ -455,10 +461,19 @@ a:hover {
         max-width: var(--reading-width);
     }
 
-    .margin-note {
-        float: none;
-        display: block;
+    .annotated-left,
+    .annotated-right {
+        flex-direction: column;
+        gap: 0;
+    }
 
+    .annotated-content {
+        order: 1;
+    }
+
+    .margin-note {
+        order: 2;
+        flex: none;
         width: auto;
         margin: 0.5rem 0 1rem;
 
