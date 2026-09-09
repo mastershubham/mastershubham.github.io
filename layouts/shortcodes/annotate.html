@@ -1,6 +1,8 @@
 {{- $side := .Get "side" | default "right" -}}
 <div class="annotated-{{ $side }}">
-    {{ .Inner | markdownify }}
+    <div class="annotated-content">
+        {{ .Inner | markdownify }}
+    </div>
     <span class="margin-note margin-note-{{ $side }}">
         {{ .Get "note" | markdownify }}
     </span>

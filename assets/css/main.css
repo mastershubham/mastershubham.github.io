@@ -424,23 +424,23 @@ a:hover {
 
 .annotated-left,
 .annotated-right {
-    display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
-}
-
-.annotated-left {
-    flex-direction: row-reverse;
+    position: relative;
+    width: 100%;
+    margin: 1.5rem 0;
 }
 
 .annotated-content {
-    flex: 1 1 auto;
+    max-width: var(--reading-width);
+    margin: 0 auto;
     min-width: 0;
 }
 
 .margin-note {
-    flex: 0 0 200px;
+    position: absolute;
+    top: 0;
+    right: calc(-200px - 1rem);
     width: 200px;
+    margin: 0;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 0.8rem;
@@ -453,6 +453,11 @@ a:hover {
 }
 
 .margin-note-left {
+    position: absolute;
+    top: 0;
+    left: calc(-200px - 1rem);
+    width: 200px;
+    margin: 0;
     text-align: right;
 }
 
@@ -463,19 +468,21 @@ a:hover {
 
     .annotated-left,
     .annotated-right {
-        flex-direction: column;
-        gap: 0;
+        display: block;
     }
 
     .annotated-content {
-        order: 1;
+        display: block;
+        margin: 0;
+        max-width: none;
     }
 
-    .margin-note {
-        order: 2;
-        flex: none;
+    .margin-note,
+    .margin-note-left {
+        position: static;
+        float: none;
         width: auto;
-        margin: 0.5rem 0 1rem;
+        margin: 0.75rem 0 1rem;
 
         font-size: 0.82rem;
         text-align: left;
