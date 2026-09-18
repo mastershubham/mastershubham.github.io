@@ -1,6 +1,6 @@
 +++
 title = "Resting-State fMRI Analysis"
-date = 2026-08-01
+date = 2025-02-01
 summary = "Analysis of resting-state functional MRI data using preprocessing, denoising, and functional connectivity methods."
 categories = ["Research", "Neuroscience"]
 tags = ["fMRI", "Neuroscience", "Python", "Statistics"]
